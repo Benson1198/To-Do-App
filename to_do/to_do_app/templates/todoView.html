@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>This is the ToDo App.</h1>
+<h1>To-Do App</h1>
 
 
   <ul>
@@ -11,7 +11,7 @@
             style = "display: inline;"
             method="post">
         {% csrf_token %}
-        <input type="submit" value = "Delete">
+        <button type="submit" name="Delete" class="btn btn-danger btn-sm">Delete</button>
 
       </form>
     </li>
@@ -21,7 +21,7 @@
   <form action="/addTodo/" method="post">
     {% csrf_token %}
     <input type="text" name="content">
-    <input type="submit" name="Add" value = "Add">
+    <button type="submit" name="Add" class="btn btn-success">Add</button>
 
   </form>
 
